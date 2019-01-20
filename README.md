@@ -75,8 +75,8 @@ ReactDOM.render(<div>
     <tbody>
         <tr>
             <td>data</td>
-            <td>Array Object</td>
-            <td>Array object data of quotes</td>
+            <td>Array Objects</td>
+            <td>Data of quotes</td>
         </tr>
         <tr>
             <td>progressBarColor</td>
