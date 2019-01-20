@@ -1,6 +1,6 @@
 {
   "name": "react-quotes-rotator",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Quotes Rotator Component React",
   "main": "dist/index.js",
   "author": "kritoka-lab",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "material-icons-react": "^1.0.4",
+    "styled-components": "^4.1.3",
     "url-loader": "^1.1.2"
   },
   "repository": {
