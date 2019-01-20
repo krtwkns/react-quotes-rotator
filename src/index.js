@@ -1,8 +1,6 @@
 import React from "react";
-import "./assets/font-awesome/css/font-awesome.min.css"
 import "./styles/app.scss";
-import { AST_Null } from "terser";
-
+import MaterialIcon from 'material-icons-react'
 class QuotesRotator extends React.Component {
     constructor(props) {
         super(props);
@@ -60,7 +58,9 @@ class QuotesRotator extends React.Component {
                     <img src={item.pic} alt={item.pic} />
                     <blockquote style={{color: `${this.props.textColor}`}}>
                         <h3>{item.title}</h3>
-                        <p>{item.content}</p>
+                        <MaterialIcon icon="format_quote"/>
+                            <span>{item.content}</span>
+                        <MaterialIcon icon="format_quote"/>
                         <footer>{item.footnote}</footer>
                     </blockquote> 
                 </div>    

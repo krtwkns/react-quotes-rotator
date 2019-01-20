@@ -1,10 +1,10 @@
 {
   "name": "react-quotes-rotator",
   "version": "0.3.0",
-  "description": "whatever",
+  "description": "Quotes Rotator Component React",
   "main": "dist/index.js",
-  "author": "kritoka",
-  "license": "MIT",
+  "author": "kritoka-lab",
+  "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -12,6 +12,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.0",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
@@ -33,10 +34,14 @@
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d public/dist",
-    "pubilsh-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy"
   },
   "dependencies": {
     "material-icons-react": "^1.0.4",
     "url-loader": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kretawiweka/calculate-cosine-similarity.git"
   }
 }

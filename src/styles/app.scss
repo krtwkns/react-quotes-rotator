@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400i');
-
 .qtrotator {
 	font-family: 'Lora', serif;
 	position: relative;
@@ -62,40 +61,20 @@
 	font-size: 1.3em;
 	font-weight: 300;
 	margin: 0.4em 0 1em;
-	p {
+	span {
 		font-style: italic;
+		margin: 10px 0px;
 	}
 }
 
 .qtrotator blockquote footer {
-	font-size: 1.2em;
+	font-size: 1em;
+	margin-top: 1.3em;
 }
 
 .qtrotator blockquote footer:before {
 	content: '- ';
 }
-
-.qtrotator blockquote p::before{
-  content: "\f10d";
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	margin-right: 10px;
-}
-
-.qtrotator blockquote p::after{
-  content: "\f10e";
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	margin-left: 10px;
-}
-
-
 .qtrotator .qtcontent img {
 	float: right;
     margin-left: 3em;
