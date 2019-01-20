@@ -1,13 +1,10 @@
 # react-quotes-rotator
-===
+
 > React Quotes Rotator.
 
 ## Description
 
 React Quotes Rotator is Quotes Component for React
-
-## Example
-
 
 
 ## Browsers
