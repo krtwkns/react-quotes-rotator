@@ -18,10 +18,6 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(css|sass|scss)$/,
-                use: ["style-loader", "css-loader" ,"sass-loader"]
-            },
-            {
                 test: /\.(svg|eot|ttf|woff|woff2)?$/,
                 loader: 'url-loader'
             }

@@ -1,6 +1,7 @@
 import React from "react";
-import "./styles/app.scss";
-import MaterialIcon from 'material-icons-react'
+import {QuotesWrapper} from './style'
+import { Icon } from 'react-icons-kit'
+import {quoteLeft, quoteRight} from 'react-icons-kit/fa/'
 class QuotesRotator extends React.Component {
     constructor(props) {
         super(props);
@@ -12,41 +13,46 @@ class QuotesRotator extends React.Component {
         };
     }
     componentDidMount(){
-        window.onload = () => {
-            this.setState({
-                data: this.props.data,
-                transition: `width ${this.props.timer}ms linear 0s`,
-                width: 100    
-            })
-            this.timerQuotes = setInterval(
-                () => {
-                    this.setState({
-                        transition: `none`,
-                        width: 0    
-                    })
-                    if(this.state.indexContentVisible+1 === this.props.data.length){
+        setTimeout(
+            function() {
+                this.setState({
+                    data: this.props.data,
+                    transition: `width ${this.props.timer}ms linear 0s`,
+                    width: 100    
+                })
+                this.timerQuotes = setInterval(
+                    () => {
                         this.setState({
-                            indexContentVisible: 0,
+                            transition: `none`,
+                            width: 0    
                         })
-                    } else {
-                        this.setState({
-                            indexContentVisible: this.state.indexContentVisible+1,
-                        })
-                    }
-                    setTimeout(
-                        function() {
+                        if(this.state.indexContentVisible+1 === this.props.data.length){
                             this.setState({
-                                transition: `width ${this.props.timer - 100}ms linear 0s`,
-                                width: 100    
-                            })       
+                                indexContentVisible: 0,
+                            })
+                        } else {
+                            this.setState({
+                                indexContentVisible: this.state.indexContentVisible+1,
+                            })
                         }
-                        .bind(this),
-                        100
-                    );                            
-                },
-                this.props.timer,
-            );    
-        }
+                        setTimeout(
+                            function() {
+                                this.setState({
+                                    transition: `width ${this.props.timer - 100}ms linear 0s`,
+                                    width: 100    
+                                })       
+                            }
+                            .bind(this),
+                            100
+                        );                            
+                    },
+                    this.props.timer,
+                );    
+            }
+            .bind(this),
+            100
+        );                            
+
     }
     render() {
         const { data, width, indexContentVisible, transition } = this.state
@@ -58,26 +64,28 @@ class QuotesRotator extends React.Component {
                     <img src={item.pic} alt={item.pic} />
                     <blockquote style={{color: `${this.props.textColor}`}}>
                         <h3>{item.title}</h3>
-                        <MaterialIcon icon="format_quote"/>
-                            <span>{item.content}</span>
-                        <MaterialIcon icon="format_quote"/>
+                        <Icon icon={quoteLeft}/>
+                        <span> {item.content} </span>
+                        <Icon icon={quoteRight}/>                        
                         <footer>{item.footnote}</footer>
                     </blockquote> 
                 </div>    
         )})
         return (
             <React.Fragment>
-                <div className="qtrotator">
-                    {QuotesContent}
-                    <span
-                        className="qtprogress"
-                        style={{
-                            transition: `${transition}`,
-                            width: `${width}%`,
-                            background: `${this.props.progressBarColor}`
-                        }}
-                    />                        
-                </div>
+                <QuotesWrapper>
+                    <div className="qtrotator">
+                        {QuotesContent}
+                        <span
+                            className="qtprogress"
+                            style={{
+                                transition: `${transition}`,
+                                width: `${width}%`,
+                                background: `${this.props.progressBarColor}`
+                            }}
+                        />                        
+                    </div>
+                </QuotesWrapper>
             </React.Fragment>
         );
     }

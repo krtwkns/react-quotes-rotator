@@ -6,6 +6,10 @@
 
 React Quotes Rotator is Quotes Component for React
 
+## Demo
+
+![react-quotes-rotator](https://user-images.githubusercontent.com/20862187/51442796-18d97780-1d13-11e9-8b4d-2e3bfd5b253a.gif)
+
 
 ## Browsers
 
@@ -97,7 +101,7 @@ ReactDOM.render(<div>
         <tr>
             <td>timer</td>
             <td>Number</td>
-            <td>Timer per.</td>
+            <td>Time per quotes display.</td>
         </tr>
     </tbody>
 </table>
