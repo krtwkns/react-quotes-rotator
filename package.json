@@ -1,6 +1,6 @@
 {
   "name": "react-quotes-rotator",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "whatever",
   "main": "dist/index.js",
   "author": "kritoka",
@@ -23,11 +23,11 @@
     "webpack-dev-server": "^3.1.14"
   },
   "peerDependencies": {
+    "material-icons-react": "^1.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
@@ -36,6 +36,7 @@
     "pubilsh-demo": "npm run build && npm run deploy"
   },
   "dependencies": {
+    "material-icons-react": "^1.0.4",
     "url-loader": "^1.1.2"
   }
 }
