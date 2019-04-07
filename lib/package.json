@@ -1,0 +1,49 @@
+{
+  "name": "react-quotes-rotator",
+  "version": "0.3.5",
+  "description": "Quotes Rotator Component React",
+  "main": "dist/index.js",
+  "author": "kritoka-lab",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-icons-kit": "^1.2.0",
+    "styled-components": "^4.1.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d public/dist",
+    "publish-demo": "npm run build && npm run deploy"
+  },
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "react-icons-kit": "^1.2.1",
+    "styled-components": "^4.1.3",
+    "url-loader": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kretawiweka/calculate-cosine-similarity.git"
+  }
+}
